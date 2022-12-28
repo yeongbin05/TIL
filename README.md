@@ -1,13 +1,21 @@
-# DAY3
+# DAY2
+
+| 출석     | 과제     | 설문     |
+| -------- | -------- | -------- |
+| &check;  | &check;  | &check;  |
+| &#x2611; | &#x2611; | &#x2611; |
 
 ```
-git add .
-git commit -m 'file'
+git
+```
 
-git remote add origin URL
+# DAY3
 
-git pull origin master
+| 출석     | 과제     | 설문     |
+| -------- | -------- | -------- |
+| &check;  | &check;  | &check;  |
+| &#x2611; | &#x2611; | &#x2611; |
 
-git push origin master
-
+```
+git & github
 ```
