@@ -46,4 +46,6 @@ git에 포함시키고 싶지 않은 내용
 ```
 git pull origin master --allow-unrelated-histories
 error: remote origin already exists  --> git remote rm origin (기존 것 삭제)
+git log --oneline --graph :그래프로
+git log -(n) : n개 commit보여줌
 ```
