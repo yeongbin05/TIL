@@ -1,7 +1,7 @@
 # First week
 
-## [DAY2](first_week/DAY2.md)
+## [WEDNESDAY](first_week/wednesday.md)
 
-## [DAY3](first_week/DAY3.md)
+## [THURSDAY](first_week/thursday.md)
 
-## [DAY4](first_week/DAY4.md)
+## [FRIDAY](first_week/friday.md)

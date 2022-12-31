@@ -1,4 +1,4 @@
-# DAY4
+# FRIDAY
 
 ## Branch
 
