@@ -42,3 +42,14 @@ branch merge PR fork
 CS50 Lecture by Mark Zuckerberg
 백준 2
 ```
+
+# SUNDAY(1.1)
+
+| 백준    |
+| ------- |
+| BRONZE2 |
+| 0       |
+
+```
+
+```
