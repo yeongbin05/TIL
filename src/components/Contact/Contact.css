@@ -1,0 +1,14 @@
+.contact {
+    background-color: #1c1c1c;
+  }
+  
+  .contact a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact a:hover {
+    color: #e64a19;
+  }
+  

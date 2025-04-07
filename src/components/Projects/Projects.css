@@ -1,0 +1,38 @@
+.projects {
+    background-color: #1e1e1e;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .project-item {
+    background-color: #222;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #eee;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+    cursor: pointer;
+  }
+  
+  .project-item img {
+    height: 250px;
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .project-item h3,
+  .project-item p {
+    margin: 15px;
+  }
+  

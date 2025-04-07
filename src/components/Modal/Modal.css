@@ -1,0 +1,82 @@
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 살짝 더 밝게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background-color: #2a2a2a; /* 너무 검은색 대신 중간톤 */
+    color: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #ff7043;
+  }
+  
+  .modal-body h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .modal-body p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .modal-body h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff7043;
+  }
+  
+  .ul-margin {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-project-image {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #444;
+  }
+  
+  .modal-body a {
+    color: #ff7043;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .modal-body a:hover {
+    color: #ff5722;
+  }
+  

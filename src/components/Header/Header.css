@@ -1,0 +1,74 @@
+.site-header {
+    background-color: #000;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+  }
+  
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #eee;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    margin-left: 20px;
+  }
+  
+  .main-nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .main-nav ul li a:hover {
+    color: #ff5722;
+  }
+  
+  .study-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .study-menu .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    display: none;
+    padding: 0;
+    border: none;
+    z-index: 1000;
+  }
+  
+  .study-menu .dropdown li {
+    list-style: none;
+  }
+  
+  .study-menu .dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .study-menu:hover .dropdown {
+    display: block;
+  }
+  
