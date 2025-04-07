@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TIL/static/css/main.a0774588.css",
-    "main.js": "/TIL/static/js/main.87f1cbff.js",
+    "main.css": "/TIL/static/css/main.03e6721c.css",
+    "main.js": "/TIL/static/js/main.fff8e674.js",
     "index.html": "/TIL/index.html",
-    "main.a0774588.css.map": "/TIL/static/css/main.a0774588.css.map",
-    "main.87f1cbff.js.map": "/TIL/static/js/main.87f1cbff.js.map"
+    "main.03e6721c.css.map": "/TIL/static/css/main.03e6721c.css.map",
+    "main.fff8e674.js.map": "/TIL/static/js/main.fff8e674.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0774588.css",
-    "static/js/main.87f1cbff.js"
+    "static/css/main.03e6721c.css",
+    "static/js/main.fff8e674.js"
   ]
 }
