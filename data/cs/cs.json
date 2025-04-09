@@ -1,0 +1,38 @@
+[
+  {
+    "id": "os-os1",
+    "title": "운영체제 개요",
+    "description": "운영체제의 기본적인 개념과 주요 기능, 역할에 대해 설명합니다.",
+    "tags": [
+      "operating-system",
+      "basics",
+      "introduction",
+      "system-software"
+    ],
+    "thumbnail": "/data/cs/os/thumbnail.png"
+  },
+  {
+    "id": "os-os2",
+    "title": "프로세스 관리",
+    "description": "운영체제에서 프로세스 관리의 중요성과 프로세스 간의 상호작용 및 스케줄링에 대해 설명합니다.",
+    "tags": [
+      "operating-system",
+      "process-management",
+      "concurrency",
+      "multitasking"
+    ],
+    "thumbnail": "/data/cs/os/thumbnail.png"
+  },
+  {
+    "id": "os-os3",
+    "title": "메모리 관리",
+    "description": "운영체제에서 메모리 관리의 중요성과 메모리 할당 방식 및 가상 메모리 기법에 대해 설명합니다.",
+    "tags": [
+      "operating-system",
+      "memory-management",
+      "virtual-memory",
+      "paging"
+    ],
+    "thumbnail": "/data/cs/os/thumbnail.png"
+  }
+]

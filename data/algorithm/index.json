@@ -1,11 +1,16 @@
 [
   {
-    "id": "two_sum",
-    "title": "Two Sum",
+    "id": "missing-number",
+    "title": "Missing Number",
     "description": "",
+    "thumbnail": "/data/algorithm/missing_number/thumbnail.png",
+    "tags": []
+  },
+  {
+    "id": "two-sum",
+    "title": "Two Sum",
+    "description": "# 목표  : nums안의 숫자 두개를 더한 값이 target이 되는 두 인덱스 값을 찾기\r",
     "thumbnail": "/data/algorithm/two_sum/thumbnail.png",
-    "tags": [
-      "Unknown"
-    ]
+    "tags": []
   }
 ]
