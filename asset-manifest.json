@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/TIL/static/css/main.97275902.css",
-    "main.js": "/TIL/static/js/main.1de74fa9.js",
+    "main.css": "/TIL/static/css/main.022696d0.css",
+    "main.js": "/TIL/static/js/main.57f4db51.js",
+    "static/media/leetcode_1_two_sum.PNG": "/TIL/static/media/leetcode_1_two_sum.443f98379449628360b9.PNG",
     "index.html": "/TIL/index.html",
-    "main.97275902.css.map": "/TIL/static/css/main.97275902.css.map",
-    "main.1de74fa9.js.map": "/TIL/static/js/main.1de74fa9.js.map"
+    "main.022696d0.css.map": "/TIL/static/css/main.022696d0.css.map",
+    "main.57f4db51.js.map": "/TIL/static/js/main.57f4db51.js.map"
   },
   "entrypoints": [
-    "static/css/main.97275902.css",
-    "static/js/main.1de74fa9.js"
+    "static/css/main.022696d0.css",
+    "static/js/main.57f4db51.js"
   ]
 }
