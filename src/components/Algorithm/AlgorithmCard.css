@@ -1,5 +1,5 @@
 .algorithm-card {
-    width: 100%;
+    width: 500px;
     padding: 30px;
     min-height: 250px;
     border-radius: 12px;
@@ -10,6 +10,7 @@
     margin-bottom: 30px;
     margin: 0 auto;
     max-width: 600px;
+    border : 1px solid #eee;
   }
   
   .algorithm-card h3 {
