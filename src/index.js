@@ -14,7 +14,10 @@ root.render(
     <Routes>
       <Route path="/*" element={<App />} />
       <Route path="/algorithm" element={<AlgorithmList />} />
-      <Route path="/algorithm/:id" element={<AlgorithmDetail />} />
+      {/* <Route path="/algorithm/:id" element={<AlgorithmDetail />} />
+       */}
+       <Route path="/algorithm/:platform/:id" element={<AlgorithmDetail />} />
+
       <Route path="/cs/" element={<CsList />} />
       <Route path="/cs/:id" element={<CsDetail />} />
     </Routes>

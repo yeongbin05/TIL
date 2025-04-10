@@ -1,3 +1,4 @@
+// pages/algorithm/AlgorithmList.jsx
 import React, { useEffect, useState } from 'react';
 import './AlgorithmList.css';
 import AlgorithmCard from '../../components/Algorithm/AlgorithmCard';
@@ -27,7 +28,7 @@ function AlgorithmList() {
   }, []);
 
   const handleCardClick = (id) => {
-    navigate(`/algorithm/${id}`);  // id = leetcode/two_sum or boj/1920
+    navigate(`/algorithm/${id}`);
   };
 
   return (
@@ -40,7 +41,14 @@ function AlgorithmList() {
       ) : (
         <div className="algorithm-list">
           {algorithms.map((item) => (
-            <div key={item.id} onClick={() => handleCardClick(item.id)} style={{ cursor: 'pointer' }}>
+            <div
+              key={item.id}
+              onClick={() => handleCardClick(item.id)}
+              style={{ cursor: 'pointer' }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && handleCardClick(item.id)}
+            >
               <AlgorithmCard data={item} />
             </div>
           ))}

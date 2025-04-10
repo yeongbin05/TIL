@@ -8,7 +8,17 @@
   max-width: 1200px; /* 콘텐츠의 최대 너비 설정 */
   padding: 0 20px; /* 좌우 여백 */
 }
-
+.algorithm-detail-content pre {
+  background-color: #111;
+  color: #0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  white-space: pre-wrap;         /* 코드도 줄바꿈 허용 */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  overflow-x: auto;              /* 그래도 너무 길면 스크롤 */
+  font-family: 'Courier New', monospace;
+}
 .algorithm-title {
   color: white;
   font-size: 2rem;
@@ -18,6 +28,10 @@
   margin-top: 20px;
   color: white;
   font-size: 1rem;
+  white-space: pre-wrap;          /* 줄바꿈 유지하면서 넘침 줄이기 */
+  word-break: break-word;         /* 긴 단어 줄바꿈 허용 */
+  overflow-wrap: break-word;      /* 추가 줄바꿈 옵션 */
+  line-height: 1.6;               /* 줄 간격도 가독성 높이게 */
 }
 
 .algorithm-image {
