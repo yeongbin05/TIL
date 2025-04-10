@@ -1,0 +1,59 @@
+
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* 카드 간 간격 */
+  padding: 40px 20px;
+  max-width: 10000px;
+  margin: 0 auto;
+}
+.cs-card {
+  width: 100%;
+  padding: 30px;
+  min-height: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  margin-bottom : 30px;
+}
+.cs-card:hover {
+  transform: translateY(-5px);
+}
+
+.cs-card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* 이미지 비율 유지 */
+  object-fit: contain; /* 비율을 유지하면서 이미지 크기 조정 */
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+.cs-card h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+
+.cs-card p {
+  font-size: 17px;
+  color: #cccccc;
+}
+
+.cs-list-wrapper {
+  min-height: 100vh;
+}
+
+.cs-list-title {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+

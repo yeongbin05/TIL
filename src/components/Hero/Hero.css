@@ -1,10 +1,10 @@
 .hero {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    /* padding-top: 80px; */
   }
   
   .hero h1 {

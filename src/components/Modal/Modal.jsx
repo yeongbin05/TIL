@@ -18,12 +18,13 @@ const projectDetails = {
       'Cloudfront를 이용한 정적 파일 CDN 구현'
     ],
     techStack: [
-      'Backend: Django',
+      'Backend: Django,SPRING',
       'Database: MySQL, MongoDB', 
-      'DevOps: Docker'
+      'DevOps: Docker, nginx, AWS(EC2, S3, Cloufront)'
     ],
     erdImage: 'images/ving_erd.webp',
-    architectureImage: 'images/ving-architecture.PNG'
+    architectureImage: 'images/ving_architecture.PNG',
+    Link : 'https://grizzled-lord-170.notion.site/8aa729dea449454fb222e21c6e2863c4'
   },
   2: {
     title: '프로젝트 2: 맞춤형 음식 추천 시스템',
@@ -40,13 +41,15 @@ const projectDetails = {
       'Django를 이용한 API 개발'
     ],
     techStack: [
-      'Backend: Django',
+      'Frontend: react-native, typescript',
+      'Backend: Django, SPRING',
       'Database: MySQL, MongoDB',
-      'Streaming & Storage: Nginx RTMP, Docker, AWS S3',
-      'Algorithm: 사용자 데이터 기반 추천 알고리즘'
+      'Infra: Docker, nginx, EC2',
+      
     ],
-    erdImage: 'images/ving_erd.webp',
-    architectureImage: 'images/ving_architecture.PNG'
+    erdImage: 'images/mozzi-erd.webp',
+    architectureImage: 'images/mozzi-architecture.png',
+    Link : "https://grizzled-lord-170.notion.site/1d7e7e3ccb5d4b5e973ab53cb9cef05a"
   }
 };
 
@@ -74,7 +77,13 @@ function Modal({ isOpen, onClose, projectId }) {
             {details.techStack.map((t, i) => <li key={i}><strong>{t}</strong></li>)}
           </ul>
 
+          <h4>📌 맡은 역할</h4>
+          <ul className="ul-margin">
+            {details.Role.map((t, i) => <li key={i}><strong>{t}</strong></li>)}
+          </ul>
+
           <h4>📌 ERD</h4>
+          {/* <img src="/images/ving_erd.webp" alt={details.title} className="modal-project-image" /> */}
           <img src={details.erdImage} alt={details.title} className="modal-project-image" />
 
           <h4>📌 아키텍처</h4>
@@ -82,7 +91,7 @@ function Modal({ isOpen, onClose, projectId }) {
 
           <h4>📌 협업 노션</h4>
           <a
-            href="https://grizzled-lord-170.notion.site/1d7e7e3ccb5d4b5e973ab53cb9cef05a"
+            href= {details.Link}
             target="_blank"
             rel="noreferrer"
             style={{ marginLeft: '25px' }}

@@ -7,14 +7,14 @@ const projectList = [
     id: 1,
     title: '유저와 아티스트를 잇는 실시간 스트리밍 서비스',
     description: '실시간 방송 플랫폼의 백엔드 구축',
-    thumbnail: 'assets/ving-thumb1.webp'
+    thumbnail: 'images/ving-mockup.PNG'
   },
   {
     id: 2,
     title: '맞춤형 음식 추천 시스템',
     description: '사용자 데이터를 바탕으로 식단을 추천',
     
-    thumbnail: process.env.PUBLIC_URL + 'mozzi-thumbnail.PNG'
+    thumbnail: 'images/mozzi-thumbnail.PNG'
   }
 ];
 

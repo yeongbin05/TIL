@@ -1,0 +1,26 @@
+.cs-detail-wrapper {
+  padding: 0 20px;  /* 좌우 여백 */
+}
+
+.cs-detail-content {
+  max-width: 1200px; /* 헤더와 동일한 최대 너비 */
+  margin: 0 auto;    /* 가운데 정렬 */
+  padding: 20px;     /* 상하 패딩 */
+}
+
+.cs-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cs-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.cs-image {
+  max-width: 100%;
+  margin-top: 20px;
+}
+  

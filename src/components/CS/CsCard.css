@@ -1,0 +1,57 @@
+.cs-card {
+  width: 100%; /* 100%로 가로폭을 늘려서 최대한 넓히고, */
+  max-width: 600px; /* 최대 너비는 600px로 제한 */
+  min-height: 250px; /* 최소 높이는 250px */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box; /* padding과 border 포함 */
+  border: 1px solid #444; /* 경계선 추가 */
+}
+
+
+.cs-card:hover {
+  transform: translateY(-5px);
+}
+
+.cs-card-thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* 이미지 높이 제한 */
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.cs-card h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.cs-card p {
+  font-size: 17px;
+  color: #cccccc;
+  word-wrap: break-word;  /* 긴 텍스트가 잘리지 않도록 처리 */
+}
+
+.cs-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cs-tag {
+  background-color: #2a2a2a;
+  color: #80cbc4;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #444;
+}

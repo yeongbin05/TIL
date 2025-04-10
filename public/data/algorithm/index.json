@@ -1,0 +1,23 @@
+[
+  {
+    "id": "boj/1920",
+    "title": "1920",
+    "description": "# 1920",
+    "tags": [],
+    "thumbnail": "/data/algorithm/boj/1920/thumbnail.png"
+  },
+  {
+    "id": "leetcode/missing_number",
+    "title": "Missing Number",
+    "description": "",
+    "tags": [],
+    "thumbnail": "/data/algorithm/leetcode/missing_number/thumbnail.png"
+  },
+  {
+    "id": "leetcode/two_sum",
+    "title": "Two Sum",
+    "description": "# 목표  : nums안의 숫자 두개를 더한 값이 target이 되는 두 인덱스 값을 찾기\r",
+    "tags": [],
+    "thumbnail": "/data/algorithm/leetcode/two_sum/thumbnail.png"
+  }
+]

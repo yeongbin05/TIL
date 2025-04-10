@@ -1,0 +1,27 @@
+/* AlgorithmDetail.css */
+.algorithm-detail-wrapper {
+  padding-top: 80px; /* 헤더 높이에 맞춰 패딩 */
+}
+
+.algorithm-detail-content {
+  margin: 0 auto;
+  max-width: 1200px; /* 콘텐츠의 최대 너비 설정 */
+  padding: 0 20px; /* 좌우 여백 */
+}
+
+.algorithm-title {
+  color: white;
+  font-size: 2rem;
+}
+
+.algorithm-description {
+  margin-top: 20px;
+  color: white;
+  font-size: 1rem;
+}
+
+.algorithm-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}

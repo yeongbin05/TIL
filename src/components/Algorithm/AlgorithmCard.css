@@ -1,0 +1,58 @@
+.algorithm-card {
+    width: 100%;
+    padding: 30px;
+    min-height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .algorithm-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .algorithm-card p {
+    font-size: 17px;
+    color: #bbbbbb;
+  }
+
+  
+  .algorithm-tags {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .algorithm-tag {
+    background-color: #2a2a2a;
+    color: #80cbc4;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid #444;
+  }
+  .algorithm-thumbnail {
+    width: 100%;
+    height: auto;         /* 비율 유지하면서 세로 유동 */
+    max-height: none;     /* 제한 없애기 */
+    object-fit: contain;
+    object-position: center;
+ 
+    border-radius: 10px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  
+  .algorithm-card-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;         /* 부모 색상 그대로 */
+  }
+  
