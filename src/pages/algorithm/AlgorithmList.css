@@ -1,10 +1,71 @@
+.algorithm-list-wrapper {
+  min-height: 100vh;
+  /* background-color: #121212;
+  color: white; */
+}
+
+.algorithm-main {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* 왼쪽 태그 영역 */
+.tag-sidebar {
+  min-width: 180px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.tag-sidebar-title {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.tag-button {
+  display: block;
+  background-color: #2a2a2a;
+  color: #80cbc4;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  margin-bottom: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.tag-button.active {
+  background-color: #3e3e3e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* 오른쪽 문제 영역 */
+.algorithm-content {
+  flex: 1;
+}
+
+.algorithm-list-title {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .algorithm-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* 카드 간 간격 */
+  gap: 40px;
   padding: 40px 20px;
-  max-width: 10000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -17,7 +78,7 @@
   transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
-  margin-bottom : 30px;
+  margin-bottom: 30px;
 }
 
 .algorithm-card:hover {
@@ -27,13 +88,12 @@
 .algorithm-card img {
   width: 100%;
   height: auto;
-  max-height: 300px; /* 이건 유지 가능, 단 실제 이미지 비율 고려 */
-  object-fit: contain; /* ← 여기 핵심! */
+  max-height: 300px;
+  object-fit: contain;
   object-position: center;
   border-radius: 10px;
   margin-bottom: 16px;
 }
-
 
 .algorithm-card h3 {
   font-size: 22px;
@@ -45,16 +105,3 @@
   font-size: 17px;
   color: #cccccc;
 }
-
-.algorithm-list-wrapper {
-  min-height: 100vh;
-}
-
-.algorithm-list-title {
-  font-size: 28px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-
