@@ -5,6 +5,7 @@ import AlgorithmCard from '../../components/Algorithm/AlgorithmCard';
 import Header from '../../components/Header/Header';
 import { useNavigate } from 'react-router-dom';
 
+// ... import 생략
 function AlgorithmList() {
   const [algorithms, setAlgorithms] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,6 @@ function AlgorithmList() {
 
   useEffect(() => {
     const path = process.env.PUBLIC_URL + '/data/algorithm/index.json';
-
     fetch(path)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
@@ -29,16 +29,23 @@ function AlgorithmList() {
     navigate(`/algorithm/${id}`);
   };
 
-  const allTags = ['전체', ...new Set(algorithms.flatMap((algo) => algo.tags))];
+  // ✅ 태그 목록 필터링: null/undefined/빈 문자열 제거
+  const allTags = ['전체', ...new Set(
+    algorithms
+      .flatMap((algo) => Array.isArray(algo.tags) ? algo.tags : [])
+      .filter((tag) => tag && tag.trim() !== '')
+  )];
 
+  // ✅ tags undefined 방지 후 includes
   const filteredAlgorithms =
     selectedTag === '전체'
       ? algorithms
-      : algorithms.filter((algo) => algo.tags.includes(selectedTag));
+      : algorithms.filter((algo) =>
+          Array.isArray(algo.tags) && algo.tags.includes(selectedTag)
+        );
 
   const visibleAlgorithms = filteredAlgorithms.slice(0, visibleCount);
 
-  // 무한 스크롤 감지
   const observerTarget = useRef();
   const loadMore = useCallback(() => {
     setVisibleCount((prev) => prev + 10);
@@ -54,18 +61,17 @@ function AlgorithmList() {
       },
       { threshold: 1 }
     );
-  
+
     if (currentTarget) {
       observer.observe(currentTarget);
     }
-  
+
     return () => {
       if (currentTarget) {
         observer.unobserve(currentTarget);
       }
     };
   }, [loadMore, filteredAlgorithms]);
-  
 
   return (
     <div className="algorithm-list-wrapper">
@@ -79,7 +85,7 @@ function AlgorithmList() {
               className={`tag-button ${selectedTag === tag ? 'active' : ''}`}
               onClick={() => {
                 setSelectedTag(tag);
-                setVisibleCount(10); // 태그 바뀌면 초기화
+                setVisibleCount(10);
               }}
             >
               {tag}

@@ -49,9 +49,14 @@ function parseMarkdown(mdContent) {
   for (let line of lines) {
     const trimmed = line.trim();
     if (trimmed.startsWith('tags:')) {
-      const match = trimmed.match(/\[(.*?)\]/);
-      if (match && match[1]) {
-        tags = match[1].split(',').map((tag) => tag.trim());
+      const content = trimmed.replace('tags:', '').trim();
+      if (content.startsWith('[')) {
+        const match = content.match(/\[(.*?)\]/);
+        if (match && match[1]) {
+          tags = match[1].split(',').map((tag) => tag.trim().replace(/^"|"$/g, ''));
+        }
+      } else {
+        tags = content.split(',').map((tag) => tag.trim().replace(/^"|"$/g, ''));
       }
     } else if (trimmed.startsWith('date:')) {
       date = trimmed.replace('date:', '').trim();
@@ -61,13 +66,13 @@ function parseMarkdown(mdContent) {
       !trimmed.startsWith('date:') &&
       trimmed !== ''
     ) {
-      // ⚠️ date, tags 제외한 첫 설명 줄
       description = trimmed;
     }
   }
 
   return { description, tags, date };
 }
+
 
 
 async function generateIndex() {
@@ -107,7 +112,7 @@ async function generateIndex() {
       id: slug,
       title,
       description,
-      tags,
+      tags: Array.isArray(tags) && tags.length > 0 ? tags : [],
       date,
       thumbnail: `/data/algorithm/${slug}/thumbnail.png`,
     });
