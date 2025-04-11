@@ -17,6 +17,14 @@ function AlgorithmDetail() {
     // 📄 description.md 불러오기
     fetch(`${process.env.PUBLIC_URL}/data/algorithm/${folderName}/description.md`)
       .then((res) => res.text())
+      .then((text) => {
+        // ✅ tags: / date: 줄 제거
+        const filtered = text
+          .split('\n')
+          .filter((line) => !line.trim().startsWith('tags:') && !line.trim().startsWith('date:'))
+          .join('\n');
+        setDescription(filtered);
+      })
       .then(setDescription)
       .catch(() => setDescription('📄 설명을 불러오지 못했습니다.'));
 

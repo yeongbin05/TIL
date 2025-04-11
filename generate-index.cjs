@@ -38,36 +38,35 @@ function formatTitleFromSlug(slug) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-// 🔍 description과 tags 파싱 (tags는 항상 첫 줄)
+// ✅ tags, date, description 파싱
+// 🔧 기존 parseMarkdown 함수에서 설명 추출 개선
 function parseMarkdown(mdContent) {
-  const lines = mdContent.split(/\r?\n/); // cross-platform
+  const lines = mdContent.split(/\r?\n/);
   let tags = [];
+  let date = null;
   let description = '';
 
-  // 1. tags 줄 찾기
-  const tagLine = lines.find(line => line.trim().startsWith('tags:'));
-  if (tagLine) {
-    const match = tagLine.match(/\[(.*?)\]/);
-    if (match && match[1]) {
-      tags = match[1].split(',').map((tag) => tag.trim());
+  for (let line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('tags:')) {
+      const match = trimmed.match(/\[(.*?)\]/);
+      if (match && match[1]) {
+        tags = match[1].split(',').map((tag) => tag.trim());
+      }
+    } else if (trimmed.startsWith('date:')) {
+      date = trimmed.replace('date:', '').trim();
+    } else if (
+      description === '' &&
+      !trimmed.startsWith('tags:') &&
+      !trimmed.startsWith('date:') &&
+      trimmed !== ''
+    ) {
+      // ⚠️ date, tags 제외한 첫 설명 줄
+      description = trimmed;
     }
   }
 
-  // 2. 첫 줄이 tags면 그 다음 비어있지 않은 줄부터 description
-  const tagLineIndex = lines.findIndex(line => line.trim().startsWith('tags:'));
-  for (let i = tagLineIndex + 1; i < lines.length; i++) {
-    if (lines[i].trim() !== '') {
-      description = lines[i].trim();
-      break;
-    }
-  }
-
-  // fallback
-  if (!description) {
-    description = lines.find((line) => line.trim() !== '') || '문제 설명이 없습니다.';
-  }
-
-  return { description, tags };
+  return { description, tags, date };
 }
 
 
@@ -94,12 +93,14 @@ async function generateIndex() {
     const descriptionPath = path.join(folderPath, 'description.md');
     let description = '문제 설명이 없습니다.';
     let tags = [];
+    let date = null;
 
     if (fs.existsSync(descriptionPath)) {
       const content = fs.readFileSync(descriptionPath, 'utf-8');
       const parsed = parseMarkdown(content);
       description = parsed.description;
       tags = parsed.tags;
+      date = parsed.date || new Date().toISOString().slice(0, 10); // 없으면 오늘 날짜
     }
 
     indexData.push({
@@ -107,9 +108,13 @@ async function generateIndex() {
       title,
       description,
       tags,
+      date,
       thumbnail: `/data/algorithm/${slug}/thumbnail.png`,
     });
   }
+
+  // ✅ 최신순 정렬
+  indexData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   fs.writeFileSync(outputPath, JSON.stringify(indexData, null, 2), 'utf-8');
   console.log('✅ index.json 생성 완료');
